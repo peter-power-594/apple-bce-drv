@@ -19,7 +19,7 @@ PWD := $(shell pwd)
 .PHONY: all
 
 all:
-	$(MAKE) -C $(KDIR) M=$(PWD) modules
+	make CC=clang CXX=clang++ LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJSIZE=llvm-size STRIP=llvm-strip -C $(KDIR) M=$(PWD) modules
 
 clean:
 	$(MAKE) -C $(KDIR) M=$(PWD) clean

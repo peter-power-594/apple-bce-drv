@@ -87,7 +87,7 @@ static int aaudio_probe(struct pci_dev *dev, const struct pci_device_id *id)
         goto fail;
     }
 
-    if (snd_card_new(aaudio->dev, aaudio_alsa_index, aaudio_alsa_id, THIS_MODULE, 0, &aaudio->card)) {
+    if (snd_card_new(aaudio->dev, aaudio_alsa_index, aaudio_alsa_id, THIS_MODULE,  0, &aaudio->card)) {
         dev_err(&dev->dev, "aaudio: Failed to create ALSA card\n");
         goto fail;
     }
@@ -664,7 +664,7 @@ int aaudio_module_init(void)
     int result;
     if ((result = alloc_chrdev_region(&aaudio_chrdev, 0, 1, "aaudio")))
         goto fail_chrdev;
-    aaudio_class = class_create(THIS_MODULE, "aaudio");
+    aaudio_class = class_create(  "aaudio");
     if (IS_ERR(aaudio_class)) {
         result = PTR_ERR(aaudio_class);
         goto fail_class;

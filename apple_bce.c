@@ -392,7 +392,7 @@ static int __init apple_bce_module_init(void)
     int result;
     if ((result = alloc_chrdev_region(&bce_chrdev, 0, 1, "apple-bce")))
         goto fail_chrdev;
-    bce_class = class_create(THIS_MODULE, "apple-bce");
+    bce_class = class_create(  "apple-bce");
     if (IS_ERR(bce_class)) {
         result = PTR_ERR(bce_class);
         goto fail_class;
