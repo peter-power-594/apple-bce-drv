@@ -88,7 +88,7 @@ static int aaudio_probe(struct pci_dev *dev, const struct pci_device_id *id)
         goto fail;
     }
 
-    if (snd_card_new(aaudio->dev, aaudio_alsa_index, aaudio_alsa_id, THIS_MODULE, 0, &aaudio->card)) {
+    if (snd_card_new(aaudio->dev, aaudio_alsa_index, aaudio_alsa_id, THIS_MODULE,  0, &aaudio->card)) {
         dev_err(&dev->dev, "aaudio: Failed to create ALSA card\n");
         goto fail;
     }
