@@ -1,5 +1,10 @@
+# About this specific fork
+
+Updated fork to use the built-in keyboard on MacBook Air* / MacBook Pro* with Open Mandriva 5.x / 6.x. (* Laptops the with Intel chipsets)
+Currently the built-in trackpad still does not work properly and need to be disabled from KDE / Gnome settings panel or via xinput.
 
 # MacBook Bridge/T2 Linux Driver
+
 A driver for MacBook models 2018 and newer, implementing the VHCI (required for mouse/keyboard/etc.) and audio functionality.
 
 The project is divided into 3 main components:
@@ -10,11 +15,6 @@ The project is divided into 3 main components:
 Please note that the `master` branch does not currently support system suspend and resume.
 
 If you want to support me, you can do so by donating to me on PayPal: https://paypal.me/mcmrarm
-
-# About this specific fork
-
-Updated fork to use the built-in keyboard on MacBook Air* / MacBook Pro* with Open Mandriva 5.x (*Laptops with Intel chipsets)
-
 
 ## Requirements
 
